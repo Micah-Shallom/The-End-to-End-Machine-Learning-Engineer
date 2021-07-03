@@ -1,0 +1,33 @@
+{%extends "layout.html"%}
+
+{%block content%}
+
+<div class="form_section">
+    <form action=""  class='formbox shadow'>
+        {{form.hidden_tag()}}
+        <fieldset>
+            <legend>Register Now</legend>
+            <div class="form-group">
+                {{ form.username.label(class='form-label') }}
+                {{ form.username(class='form form-control') }}
+            </div>
+            <div class="form-group">
+                {{ form.email.label(class='form-label') }}
+                {{ form.email(class='form form-control') }}
+            </div>
+            <div class="form-group">
+                {{ form.password.label(class='form-label') }}
+                {{ form.password(class='form form-control') }}
+            </div>
+            <div class="form-group">
+                {{ form.confirm_password.label(class='form-label') }}
+                {{ form.confirm_password(class='form form-control') }}
+            </div>
+            <div class="form-group">
+                {{form.submit(class='btn btn-outline-primary btn-lg my-3')}}
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+{%endblock%}
